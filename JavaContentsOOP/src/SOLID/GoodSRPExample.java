@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SOLIDExamples;
+package SOLID;
 
 class Square {
     public double length;
@@ -43,7 +43,7 @@ class Triangle {
 
 /**
  *
- * @author mauricio.moreira
+ * @author maumneto
  */
 public class GoodSRPExample {
     public static void main(String[] args) {

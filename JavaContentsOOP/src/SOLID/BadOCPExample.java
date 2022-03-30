@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SOLIDExamples;
+package SOLID;
 
 /**
  *
- * @author mauricio.moreira
+ * @author maumneto
  */
 class Account {
     private double balance;

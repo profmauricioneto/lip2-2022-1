@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SOLIDExamples;
+package SOLID;
 
 /**
  *
- * @author mauricio.moreira
+ * @author maumneto
  */
+
 class Account {
     private double balance;
     public Account() {
@@ -35,29 +36,29 @@ class Account {
     }
 }
 
-class AccountSpecial {
-    private Account account;
+class AccountSpecial extends Account {
     public AccountSpecial() {
-        account = new Account();
+        super();
     }
     public AccountSpecial(double balance) {
-        account = new Account(balance);
+        super(balance);
     }
-    public double getBalance() {
-        return account.getBalance();
-    }
-    public void withdraw(double value) {
-        account.withdraw(value);
-    }
-    public void deposit(double value) {
-        account.deposit(value);
+    @Override
+    public void income() {
+        System.out.println("There's no income in this account type.");
     }
 }
-public class GoodLSPExample {
+public class BadLSPExample {
     public static void main(String[] args) {
-        AccountSpecial account = new AccountSpecial(500);
-        System.out.println("Balance: " + account.getBalance());
-        account.deposit(100);
-        System.out.println("New Balance: " + account.getBalance());
+        Account accountExample = new Account(100);
+        System.out.println("Balance: " + accountExample.getBalance());
+        accountExample.income();
+        System.out.println("Balance with income: " + accountExample.getBalance());
+        
+        Account accountSpecial = new AccountSpecial(1000);
+        System.out.println("Balance: " + accountSpecial.getBalance());
+        accountSpecial.income();
+        System.out.println("Balance with income: " + accountSpecial.getBalance());
+        
     }
 }
