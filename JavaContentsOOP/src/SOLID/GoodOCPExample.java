@@ -64,6 +64,21 @@ class VirtualAccount extends Account {
     }
 }
 
+class SavingsAccount extends Account {
+    public SavingsAccount() {
+        super();
+    }
+    public SavingsAccount(double balance) {
+        super(balance);
+    }
+
+    @Override
+    public void createAccount() {
+        System.out.println("Savings account created.");
+    }
+    
+}
+
 public class GoodOCPExample {
     public static void main(String[] args) {
         Account salaryAccount = new SalaryAccount(1000);
@@ -74,5 +89,8 @@ public class GoodOCPExample {
         
         Account vAccount = new VirtualAccount();
         vAccount.createAccount();
+        
+        Account sAccount = new SavingsAccount();
+        sAccount.createAccount();
     }
 }

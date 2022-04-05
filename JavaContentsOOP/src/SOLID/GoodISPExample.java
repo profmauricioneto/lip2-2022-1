@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package SOLID;
+import java.util.Collection;
+import java.util.List;
 
 /**
  *

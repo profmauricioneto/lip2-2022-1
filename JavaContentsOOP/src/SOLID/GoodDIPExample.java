@@ -21,16 +21,26 @@ class BackEndCode {
     }
 }
 
+class FrameworkFront {
+    public void react() {
+        System.out.println("Developing front with React");
+    }
+}
+
+
 class Coder {
     FrontEndCode front;
     BackEndCode back;
+    FrameworkFront framework;
     public Coder() {
         front = new FrontEndCode();
         back = new BackEndCode();
+        framework = new FrameworkFront();
     }
     public void devCode() {
         front.typescript();
         back.node();
+        framework.react();
     }
 }
 

@@ -20,7 +20,7 @@ public class ConnectionMySQL {
     private final String username = "root";
     private final String password = "mauricio123";
 
-    public ConnectionMySQL() {
+    private ConnectionMySQL() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             this.connection = DriverManager.getConnection(url, username, password);
@@ -29,11 +29,7 @@ public class ConnectionMySQL {
         }
     }
 
-    public Connection getConnection() {
-        return this.connection;
-    }
-
-    public static ConnectionMySQL getInstance() {
+    public static synchronized ConnectionMySQL getInstance() {
         if (instance == null) {
             instance = new ConnectionMySQL();
             System.out.println("Connection Success");
