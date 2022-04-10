@@ -9,8 +9,8 @@ package SocialNetworkProject;
  * @author maumneto
  */
 public abstract class SocialNetwork {
-        public String username;
-        public String password;
+    public String username;
+    public String password;
 
     public SocialNetwork() {}
     

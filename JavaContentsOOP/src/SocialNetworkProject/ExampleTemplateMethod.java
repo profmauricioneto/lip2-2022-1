@@ -33,8 +33,11 @@ public class ExampleTemplateMethod {
 
         if (socialNet.equals("facebook")) {
             network = new FacebookNetwork(username, password);
-        } else {
+        } else if (socialNet.equals("twitter")) {
             network = new TwitterNetwork(username, password);
+            
+        } else if (socialNet.equals("linkedin")) {
+            network = new LinkedInNetwork(username, password);
         }
         network.postData(message);
     }

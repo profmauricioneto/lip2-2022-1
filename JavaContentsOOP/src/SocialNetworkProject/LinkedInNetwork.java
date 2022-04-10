@@ -8,27 +8,33 @@ package SocialNetworkProject;
  *
  * @author maumneto
  */
-public class FacebookNetwork extends SocialNetwork {
+public class LinkedInNetwork extends SocialNetwork {
 
-    public FacebookNetwork(String username, String password) {
-        this.username = username;
+    public LinkedInNetwork(String username, String password) {
         this.password = password;
+        this.username = username;
     }
-
+    
+    
     public boolean login(String username, String password) {
         System.out.println("Name: " + this.username);
         System.out.print("Senha: ");
         for (int i = 0; i < this.password.length(); i++) {
             System.out.print("*");
         }
-        System.out.println("\nLogin realizado com sucesso!");
-        return true;
+        if (this.username.equals("admin") && this.password.equals("admin123")){
+            System.out.println("\nLogin realizado com sucesso!");
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
     public boolean sendData(byte[] data) {
         boolean isSend = true;
         if (isSend) {
-            System.out.println("Mensagem: " + new String(data) + " foi postada no facebook!");
+            System.out.println("Mensagem: " + new String(data) + " foi postada no LinkedIn!");
             return true;
         } else {
             return false;
@@ -36,6 +42,6 @@ public class FacebookNetwork extends SocialNetwork {
     }
 
     public void logout() {
-        System.out.println("Usuário: " + username + " foi desconectado do facebook!");
+        System.out.println("Usuário: " + username + " foi desconectado do LinkedIn!");
     }
 }
