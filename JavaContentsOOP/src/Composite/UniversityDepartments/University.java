@@ -16,6 +16,8 @@ public class University {
         
         HeadDepartment allDepartment = new HeadDepartment(3, "Chefia");
         
+        ResearchDepartment researchDep = new ResearchDepartment(5, "Research Department");
+        
         allDepartment.addDepartment(sales);
         allDepartment.printDepartmentName();
         System.out.println("-------------------------------");
@@ -23,6 +25,9 @@ public class University {
         allDepartment.printDepartmentName();
         System.out.println("-------------------------------");
         allDepartment.addDepartment(rh);
+        allDepartment.printDepartmentName();
+        System.out.println("-------------------------------");
+        allDepartment.addDepartment(researchDep);
         allDepartment.printDepartmentName();
     }
 }

@@ -14,11 +14,11 @@ import java.util.List;
  */
 public class HeadDepartment implements Department {
     public int id;
-    public String name;
+    public String description;
     public List<Department> departments;
-    public HeadDepartment(int id, String name) {
+    public HeadDepartment(int id, String description) {
         this.id = id;
-        this.name = name;
+        this.description = description;
         departments = new ArrayList<>();
     }
     public void addDepartment(Department d) {
@@ -29,6 +29,11 @@ public class HeadDepartment implements Department {
     }
     @Override
     public void printDepartmentName() {
+        /*
+            for(Department d: departaments) {
+                d.printDepartmentName();
+            }
+        */
         departments.forEach(Department::printDepartmentName);
     }    
 }

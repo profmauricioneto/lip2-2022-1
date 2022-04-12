@@ -10,11 +10,11 @@ package Composite.UniversityDepartments;
  */
 public class FinancialDepartment implements Department {
     public int id;
-    public String name;
+    public String description;
 
-    public FinancialDepartment(int id, String name) {
+    public FinancialDepartment(int id, String description) {
         this.id = id;
-        this.name = name;
+        this.description = description;
     }
     @Override
     public void printDepartmentName() {

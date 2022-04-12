@@ -8,14 +8,15 @@ package Composite.UniversityDepartments;
  *
  * @author maumneto
  */
-public class SalesDepartment implements Department {
-    public int id;
+public class ResearchDepartment implements Department {
+    private int id;
     public String description;
 
-    public SalesDepartment(int id, String description) {
+    public ResearchDepartment(int id, String description) {
         this.id = id;
         this.description = description;
     }
+
     @Override
     public void printDepartmentName() {
         System.out.println(getClass().getSimpleName());
