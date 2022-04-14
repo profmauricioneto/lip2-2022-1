@@ -34,6 +34,7 @@ public final class View extends JFrame {
     
     public View() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
         setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 
         textEnter1 = new JTextField(5);
@@ -48,8 +49,7 @@ public final class View extends JFrame {
         add(divButton);
         textEnter2 = new JTextField(5);
         add(textEnter2);
-
-        label = new JLabel(" ");
+        label = new JLabel(" Result: -");
         add(label);
 
         button = new JButton("run");
@@ -57,6 +57,7 @@ public final class View extends JFrame {
 
         setOperationButtonBehavior();
         pack();
+        setSize(300, 300);
         setVisible(true);      
     }
     
@@ -72,7 +73,7 @@ public final class View extends JFrame {
         button.addActionListener(buttonBehavior);
     }
     
-    public void setOperationSelected(int operationSelected) {
+    private void setOperationSelected(int operationSelected) {
         this.operationSelected = operationSelected;
     }
 
@@ -107,6 +108,6 @@ public final class View extends JFrame {
     }
 
     public void setLabel(String result) {
-        label.setText(result);
+        label.setText("result: "+ result);
     }
 }
