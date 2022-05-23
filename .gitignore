@@ -24,3 +24,6 @@ hs_err_pid*
 /JavaContentsOOP/nbproject/private/
 /JavaContentsOOP/build/
 /JavaContentsOOP/dist/
+/JavaContentsOOP/src/DatabaseJDBC/build/
+/JavaContentsOOP/src/DatabaseJDBC/dist/
+/JavaContentsOOP/src/DatabaseJDBC/nbproject/private/
